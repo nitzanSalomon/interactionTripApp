@@ -1,0 +1,514 @@
+html,
+body, #main {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  direction: rtl;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  user-select: none;
+}
+
+.pages {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+}
+
+/* start page */
+#start {
+    background-image: url(./assets/start.jpg);
+    grid-template-columns: 1fr 1.5fr 2.2fr 3.8fr 1.5fr 1fr;
+    grid-template-rows: 2.5fr 1fr 1fr 3.2fr 1fr 1.4fr;
+}
+
+#caruselLeft {
+    grid-area: 3 / 1 / span 1 / span 1;
+}
+
+#caruselRight {
+    grid-area: 3 / 6 / span 1 / span 1;
+}
+
+#liftOff {
+    grid-area: 5 / 3 / span 1 / span 2;
+}
+
+#startPicNum {
+    grid-area: 2 / 4 / span 1 / span 1;
+    font-size: 3rem;
+}
+
+/* data1 */
+#data1 {
+    background-image: url(./assets/data1.jpg);
+    grid-template-columns: 1.9fr 0.6fr 2.8fr 0.7fr 0.6fr 0.4fr 0.4fr 1.1fr 2.5fr;
+    grid-template-rows: 1.2fr 0.8fr 0.5fr 0.7fr 0.4fr 0.7fr 0.3fr 0.5fr 4.8fr 0.9fr 0.8fr;
+}
+
+#adultsPlus {
+    grid-area: 2 / 4 / span 1 / span 1;
+}
+
+#adultsNum {
+    grid-area: 2 / 5 / span 1 / span 2;
+}
+
+#adultsMin {
+    grid-area: 2 / 7 / span 1 / span 2;
+}
+
+#kidsPlus {
+    grid-area: 4 / 5 / span 1 / span 1;
+}
+
+#kidsNum {
+    grid-area: 4 / 6 / span 1 / span 2;
+}
+
+#kidsMin {
+    grid-area: 4 / 8 / span 1 / span 1;
+}
+
+#dates {
+    grid-area: 6 / 2 / span 1 / span 7;
+}
+
+#flex {
+    grid-area: 8 / 2/ span 1 / span 1;
+}
+
+#next1 {
+    grid-area: 10 / 3/ span 1 / span 6;
+}
+
+/* dates */
+#dateSlider{
+    width: 100vw;
+    height: 70vh;
+    position: absolute;
+    bottom: -70vh;;
+}
+
+.datePage {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100vw;
+    height: 70vh;
+    position: absolute;
+    display: grid;
+    z-index: 3;
+    border-radius: 2rem;
+}
+
+/* datePage1 */
+#datePage1 {
+    background-image: url(./assets/dates1.jpg);
+    grid-template-columns: 1fr 0.9fr 0.87fr 0.85fr 0.83fr 1fr 1.55fr;
+    grid-template-rows: 2.4fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.6fr 0.4fr;
+}
+
+#selectDate1{
+    grid-area: 10 / 3 / span 1 / span 4;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+#startDate{
+    grid-area: 5 / 4 / span 1 / span 1;
+}
+
+/* datePage2 */
+#datePage2 {
+    bottom: 0;
+    background-image: url(./assets/dayBack.jpg);
+    grid-template-columns: 1.7fr 1.2fr 0.85fr 1.6fr 1.9fr;
+    grid-template-rows: 0.7fr 0.7fr 3.5fr 0.7fr 1.3fr 0.6fr 0.6fr 0.8fr 0.5fr;
+}
+
+#clear{
+    grid-area: 2 / 5 / span 1 / span 1;
+}
+
+#backDate{
+    grid-area: 6 / 3 / span 1 / span 1;
+}
+
+#goDate{
+    grid-area: 4 / 3 / span 1 / span 1;
+}
+
+#selectDate2{
+    grid-area: 8 / 2 / span 1 / span 3;
+}
+
+/* data2 */
+#data2 {
+    background-image: url(./assets/data2.jpg);
+    grid-template-columns: 0.3fr 0.2fr 0.5fr 0.4fr 2.3fr 0.9fr 0.4fr;
+    grid-template-rows: 0.4fr 0.5fr 1.2fr 7fr 0.35fr 0.95fr 0.5fr ;
+}
+
+#backToData1{
+    grid-area: 2 / 3 / span 1 / span 2;
+}
+
+#ready{
+    grid-area: 6 / 4 / span 1 / span 2;
+}
+
+#tripTypes{
+    grid-area: 4 / 2 / span 1 / span 5;
+    overflow-y: scroll;
+    background-color: white;
+}
+
+#tripType0{
+    background-image: url(./assets/data2option1.jpg);
+}
+#tripType1,#tripType5{
+    background-image: url(./assets/data2option2.jpg);
+}
+#tripType2,#tripType6{
+    background-image: url(./assets/data2option3.jpg);
+}
+#tripType3{
+    background-image: url(./assets/data2option4.jpg);
+}
+#tripType4{
+    background-image: url(./assets/data2option5.jpg);
+}
+
+.tripType {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 10vh;
+}
+
+/* tripOptions */
+#tripOptions {
+    background-image: url(./assets/tripOptions.jpg);
+    grid-template-columns: 0.7fr 1.8fr 0.4fr 1.8fr 0.4fr 1.7fr 0.5fr 1fr;
+    grid-template-rows: 0.5fr 0.4fr 1.2fr 7fr;
+}
+
+#updateButton{
+    grid-area: 2 / 2 / span 1 / span 1;
+}
+
+#favoritsButton{
+    grid-area: 2 / 4 / span 1 / span 1;
+}
+
+#modButton{
+    grid-area: 2 / 6 / span 1 / span 1;
+}
+
+#tripOptionScroll{
+    grid-area: 4 / 2 / span 1 / span 6;
+    overflow-y: scroll;
+    background-color: white;
+}
+
+.tripOption,.favOption {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 40vh;
+    background-image: url(./assets/tripOption.jpg);
+    margin-bottom: 6vh;
+    display: grid;
+    grid-template-columns: 5fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1.4fr 0.8fr 0.8fr;
+    z-index: 2;
+}
+
+.tripOptionButton,.favOptionButton {
+    grid-area: 1 / 1 / span 3 / span 3;
+}
+
+.tripNum,.favNum {
+    grid-area: 2 / 2 / span 1 / span 1;
+    font-size: 3rem;
+}
+
+.tripFav,.favTrip {
+    grid-area: 4 /3 / span 1 / span 1;
+    border-radius: 50%;
+    z-index: 4;
+}
+
+/* updatePage */
+#updatePage {
+    background-image: url(./assets/update.jpg);
+    grid-template-columns: 0.8fr 0.4fr 0.4fr 0.5fr 0.4fr 0.5fr 0.5fr 1.3fr 0.7fr 0.4fr 0.4fr 0.5fr 1.5fr;
+    grid-template-rows: 0.4fr 0.5fr 0.4fr 0.3fr 0.3fr 0.6fr 0.2fr 0.3fr 2.6fr 2.5fr 0.6fr 0.7fr 0.5fr;
+}
+
+#updateToTripType {
+    grid-area: 2 / 2 / span 1 / span 3;
+}
+
+#adultsPlusUpdate {
+    grid-area: 4 / 5 / span 1 / span 1;
+}
+
+#adultsNumUpdate  {
+    grid-area: 4 / 6 / span 1 / span 1;
+}
+
+#adultsMinUpdate  {
+    grid-area: 4 / 7 / span 1 / span 1;
+}
+
+#kidsPlusUpdate  {
+    grid-area: 4 / 9 / span 1 / span 1;
+}
+
+#kidsNumUpdate  {
+    grid-area: 4 / 10 / span 1 / span 1;
+}
+
+#kidsMinUpdate  {
+    grid-area: 4 / 11 / span 1 / span 1;
+}
+
+#updateDates  {
+    grid-area: 6 / 2 / span 1 / span 10;
+}
+
+#updateFlex  {
+    grid-area: 8 / 2 / span 1 / span 1;
+}
+
+#showResult  {
+    grid-area: 12 / 4 / span 1 / span 7;
+}
+
+#resultNum  {
+    grid-area: 12 / 9 / span 1 / span 1;
+    font-size: 2.5rem;
+    padding-top: 1vh;
+}
+
+#tripTypeScroll  {
+    grid-area: 10 / 2 / span 1 / span 9;
+    overflow-y: scroll;
+    background-color: white;
+}
+
+.updateTrip {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 5vh;
+    display: grid;
+    grid-template-columns:0.4fr 0.5fr 9fr;
+}
+
+#updateTrip0,#updateTrip4{
+    background-image: url(./assets/updateTrip1.jpg);
+    grid-template-rows: 1fr 1fr 0.5fr;
+}
+    
+#updateTrip1,#updateTrip5{
+    background-image: url(./assets/updateTrip2.jpg);
+    grid-template-rows: 0.5fr 0.7fr 0.5fr;
+}
+
+#updateTrip2,#updateTrip6{
+    background-image: url(./assets/updateTrip3.jpg);
+    grid-template-rows: 0.4fr 0.7fr 0.5fr;
+}
+
+#updateTrip3{
+    background-image: url(./assets/updateTrip4.jpg);
+    grid-template-rows: 0.5fr 0.7fr 0.5fr;
+}
+
+.tripSelect  {
+    grid-area: 2 / 2 / span 1 / span 1;
+    border-radius: 50%;
+}
+
+/* favoritsSelected */
+#favoritsSelected {
+    background-image: url(./assets/farvorits.jpg);
+    grid-template-columns:0.5fr 1.1fr 4.2fr 0.7fr;
+    grid-template-rows: 0.5fr 0.3fr 1fr 7fr;
+}
+
+#backFromFav {
+    grid-area: 2 / 2 / span 1 / span 1;
+    border-radius: 30%;
+}
+
+#favoritsScroll {
+    grid-area: 4 / 2 / span 1 / span 2;
+    overflow-y: scroll;
+    background-color: white;
+}
+
+/* favoritsNull */
+#favoritsNull {
+    background-image: url(./assets/emptyFav.jpg);
+    grid-template-columns: 0.5fr 1.3fr 4.7fr;
+    grid-template-rows: 0.5fr 0.3fr 1fr 7fr;
+}
+
+#backFromFavNull {
+    grid-area: 2 / 2 / span 1 / span 1;
+    border-radius: 30%;
+}
+
+/* modPage */
+#modPage {
+    background-image: url(./assets/modification.jpg);
+    grid-template-columns: 1fr 0.95fr 0.45fr 0.1fr 0.2fr 0.2fr 0.2fr 0.2fr 1.2fr;
+    grid-template-rows: 3.35fr 0.3fr 0.55fr 0.45fr 4.25fr 0.8fr 0.7fr;
+}
+
+#allInclusive {
+    grid-area: 2 / 3 / span 1 / span 2;
+    border-radius: 30%;
+}
+
+#breakfast {
+    grid-area: 4 / 4 / span 1 / span 3;
+    border-radius: 30%;
+}
+
+#showResultMod {
+    grid-area: 6 / 2 / span 1 / span 5;
+    border-radius: 30%;
+}
+
+#resultNumMod {
+    grid-area: 6 / 6 / span 1 / span 2;
+    font-size: 2.5rem;
+    padding-top: 2vh;
+}
+
+/* dealPage */
+
+#dealPageTop{
+    overflow-y: scroll;
+
+}
+
+#dealPicContainer{
+    background-image: url(./assets/dealPage.jpg);
+    grid-template-columns: 0.2fr 0.5fr 0.3fr 0.8fr 0.5fr 1.2fr 0.5fr;
+    grid-template-rows: 0.8fr 0.5fr 5.6fr 0.8fr 2.3fr;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100vw;
+    height: 70vh;
+    display: grid;
+}
+
+#backFromDeal {
+    grid-area: 2 / 2 / span 1 / span 2;
+}
+
+#dealCaruselRight {
+    grid-area: 4 / 2 / span 1 / span 1;
+}
+
+#dealPicNum {
+    grid-area: 4 / 5 / span 1 / span 1;
+    font-size: 2.5rem;
+}
+
+#dealCaruselLeft {
+    grid-area: 4 / 7 / span 1 / span 1;
+}
+
+#dealInfo {
+    /* grid-area: 6 / 2 / span 1 / span 5; */
+    background-color: white;
+    font-size: 1rem;
+    line-height: 150%;
+    padding: 1rem;
+    margin-bottom: 15vh;
+}
+
+#dealPageBottom {
+    position: fixed;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 100vw;
+    height: 15vh;
+    display: grid;
+    background-image: url(./assets/dealPageBottom.jpg);
+    grid-template-columns: 4.9fr 2.8fr 0.7fr;
+    grid-template-rows: 0.7fr 1fr 0.8fr;
+}
+
+#order {
+    grid-area: 2 / 2 / span 1 / span 1;
+}
+
+/* tools----------------------------------------------- */
+
+@keyframes slideIn {
+    100% {
+        bottom: 0;
+        /* visibility: visible; */
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        bottom: 0;
+    }
+    100% {
+        bottom: -70vh;
+        /* visibility: hidden; */
+    }
+}
+
+.disabeled {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.enabled {
+    background-color: rgba(0, 255, 4, 0.4);
+}
+
+.selected {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.selectedPic {
+    box-shadow: inset 0 0 0 999999px rgba(0, 0, 0, 0.4);
+}
+
+.darkScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+.textCenter {
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.inviseble {
+    visibility: hidden;
+}
