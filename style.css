@@ -266,15 +266,15 @@ body, #main {
 }
 
 #kidsPlusUpdate  {
-    grid-area: 4 / 9 / span 1 / span 1;
-}
-
-#kidsNumUpdate  {
     grid-area: 4 / 10 / span 1 / span 1;
 }
 
-#kidsMinUpdate  {
+#kidsNumUpdate  {
     grid-area: 4 / 11 / span 1 / span 1;
+}
+
+#kidsMinUpdate  {
+    grid-area: 4 / 12 / span 1 / span 1;
 }
 
 #updateDates  {
