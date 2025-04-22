@@ -36,6 +36,7 @@ body, #main {
 
 #liftOff {
     grid-area: 5 / 3 / span 1 / span 2;
+    background-color: #ff69b478;
 }
 
 #startPicNum {
@@ -56,6 +57,7 @@ body, #main {
 
 #adultsNum {
     grid-area: 2 / 5 / span 1 / span 2;
+    padding-top: 0.5rem;
 }
 
 #adultsMin {
@@ -68,6 +70,7 @@ body, #main {
 
 #kidsNum {
     grid-area: 4 / 6 / span 1 / span 2;
+    padding-top: 0.5rem;
 }
 
 #kidsMin {
@@ -76,6 +79,8 @@ body, #main {
 
 #dates {
     grid-area: 6 / 2 / span 1 / span 7;
+    background-color: #1dbdc975;
+
 }
 
 #flex {
@@ -84,6 +89,17 @@ body, #main {
 
 #next1 {
     grid-area: 10 / 3/ span 1 / span 6;
+}
+
+#adultsColor {
+    grid-area: 2 / 2/ span 1 / span 7;
+    background-color: #1dbdc975;
+
+}
+
+#kidsColor {
+    grid-area: 4 / 2/ span 1 / span 7;
+    background-color: #1dbdc975;
 }
 
 /* dates */
@@ -131,6 +147,7 @@ body, #main {
 
 #clear{
     grid-area: 2 / 5 / span 1 / span 1;
+    background-color: #ffce8863;
 }
 
 #backDate{
@@ -154,6 +171,7 @@ body, #main {
 
 #backToData1{
     grid-area: 2 / 3 / span 1 / span 2;
+    background-color: #b6e1e48f;
 }
 
 #ready{
@@ -198,14 +216,17 @@ body, #main {
 
 #updateButton{
     grid-area: 2 / 2 / span 1 / span 1;
+    background-color: #b6e1e48f;
 }
 
 #favoritsButton{
     grid-area: 2 / 4 / span 1 / span 1;
+    background-color: #b6e1e48f;
 }
 
 #modButton{
     grid-area: 2 / 6 / span 1 / span 1;
+    background-color: #b6e1e48f;
 }
 
 #tripOptionScroll{
@@ -225,10 +246,12 @@ body, #main {
     grid-template-columns: 5fr 1fr 1fr;
     grid-template-rows: 2fr 1fr 1.4fr 0.8fr 0.8fr;
     z-index: 2;
+    background-color: #fff4008f;
 }
 
 .tripOptionButton,.favOptionButton {
     grid-area: 1 / 1 / span 3 / span 3;
+    background-color: #1dbdc975;
 }
 
 .tripNum,.favNum {
@@ -251,6 +274,7 @@ body, #main {
 
 #updateToTripType {
     grid-area: 2 / 2 / span 1 / span 3;
+    background-color: #b6e1e48f;
 }
 
 #adultsPlusUpdate {
@@ -259,6 +283,7 @@ body, #main {
 
 #adultsNumUpdate  {
     grid-area: 4 / 6 / span 1 / span 1;
+    padding-bottom: 0.5vh;
 }
 
 #adultsMinUpdate  {
@@ -271,6 +296,7 @@ body, #main {
 
 #kidsNumUpdate  {
     grid-area: 4 / 11 / span 1 / span 1;
+    padding-bottom: 0.5vh;
 }
 
 #kidsMinUpdate  {
@@ -287,6 +313,7 @@ body, #main {
 
 #showResult  {
     grid-area: 12 / 4 / span 1 / span 7;
+    background-color: rgba(0, 255, 4, 0.4);
 }
 
 #resultNum  {
@@ -383,8 +410,9 @@ body, #main {
 }
 
 #showResultMod {
-    grid-area: 6 / 2 / span 1 / span 5;
+    grid-area: 6 / 2 / span 1 / span 7;
     border-radius: 30%;
+    background-color: rgba(0, 255, 4, 0.4);
 }
 
 #resultNumMod {
@@ -402,8 +430,8 @@ body, #main {
 
 #dealPicContainer{
     background-image: url(./assets/dealPage.jpg);
-    grid-template-columns: 0.2fr 0.5fr 0.3fr 0.8fr 0.5fr 1.2fr 0.5fr;
-    grid-template-rows: 0.8fr 0.5fr 5.6fr 0.8fr 2.3fr;
+    grid-template-columns: 0.2fr 0.2fr 0.3fr 0.25fr 0.85fr 0.5fr 1.2fr 0.5fr;
+    grid-template-rows: 0.8fr 0.5fr 0.6fr 0.8fr 0.4fr 0.8fr 0.3fr 0.8fr 1.9fr 0.8fr 2.3fr;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     width: 100vw;
@@ -412,20 +440,39 @@ body, #main {
 }
 
 #backFromDeal {
-    grid-area: 2 / 2 / span 1 / span 2;
+    grid-area: 2 / 2 / span 1 / span 3;
+    background-color: #b6e1e48f;
 }
 
 #dealCaruselRight {
-    grid-area: 4 / 2 / span 1 / span 1;
+    grid-area: 10 / 2 / span 1 / span 1;
 }
 
 #dealPicNum {
-    grid-area: 4 / 5 / span 1 / span 1;
+    grid-area: 10 / 6 / span 1 / span 1;
     font-size: 2.5rem;
 }
 
 #dealCaruselLeft {
-    grid-area: 4 / 7 / span 1 / span 1;
+    grid-area: 10 / 8 / span 1 / span 1;
+}
+
+#circule1 {
+    grid-area: 4 / 3 / span 1 / span 2;
+    background-color: #f3db2984;
+    border-radius: 50%;
+}
+
+#circule2 {
+    grid-area: 6 / 3 / span 1 / span 2;
+    background-color: #29f35784;;
+    border-radius: 50%;
+}
+
+#circule3 {
+    grid-area: 8 / 3 / span 1 / span 2;
+    background-color: #8479ff84;
+    border-radius: 50%;
 }
 
 #dealInfo {
@@ -452,8 +499,16 @@ body, #main {
 
 #order {
     grid-area: 2 / 2 / span 1 / span 1;
+    background-color: rgba(0, 255, 4, 0.4);
 }
 
+.selected.tripFav{
+    background-color: #f7fe2a66;
+}
+
+.selected.favTrip {
+    background-color: #f7fe2a66;
+}
 /* tools----------------------------------------------- */
 
 @keyframes slideIn {
@@ -482,11 +537,13 @@ body, #main {
 }
 
 .selected {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgb(43 255 190 / 40%);
+    border-radius: 2rem;
 }
 
 .selectedPic {
-    box-shadow: inset 0 0 0 999999px rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0 0 0 999999px #1dbdc975;
+    border-radius: 2rem;
 }
 
 .darkScreen {
