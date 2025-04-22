@@ -372,6 +372,7 @@ body, #main {
 #backFromFav {
     grid-area: 2 / 2 / span 1 / span 1;
     border-radius: 30%;
+    background-color: #b6e1e48f;
 }
 
 #favoritsScroll {
@@ -390,6 +391,7 @@ body, #main {
 #backFromFavNull {
     grid-area: 2 / 2 / span 1 / span 1;
     border-radius: 30%;
+    background-color: #b6e1e48f;
 }
 
 /* modPage */
