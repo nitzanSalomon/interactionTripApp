@@ -37,7 +37,7 @@ window.addEventListener("load", () => {
         }
     });
     document.querySelector("#liftOff").addEventListener("click", startApp);
-    // document.querySelector("#liftOff").addEventListener("click", openFullscreen);
+    document.querySelector("#liftOff").addEventListener("click", openFullscreen);
 });
 function openFullscreen() {
     if (elem.requestFullscreen) {
