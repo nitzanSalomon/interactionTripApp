@@ -12,22 +12,44 @@ let favNum = 0;
 let bFavorits = false;
 let bDateSelected = false;
 let bPeopleSelected = false;
+const MAXNUM = 10;
+var elem = document.querySelector("html");
 /* loading function
 --------------------------------------------------------------
 Description: */
 window.addEventListener("load", () => { 
     document.querySelector("#caruselRight").addEventListener("click", ()=>{
-        startPicNum++;
-        document.querySelector("#startPicNum").innerHTML = startPicNum;
+        if(startPicNum === MAXNUM){
+            startPicNum = 1;
+            document.querySelector("#startPicNum").innerHTML = startPicNum;
+        } else {
+            startPicNum++;
+            document.querySelector("#startPicNum").innerHTML = startPicNum;;
+        }
     });
     document.querySelector("#caruselLeft").addEventListener("click", ()=>{
         if(startPicNum > 1){
             startPicNum--;
             document.querySelector("#startPicNum").innerHTML = startPicNum;
+        } else {
+            startPicNum = MAXNUM;
+            document.querySelector("#startPicNum").innerHTML = startPicNum;
         }
     });
     document.querySelector("#liftOff").addEventListener("click", startApp);
+    // document.querySelector("#liftOff").addEventListener("click", openFullscreen);
 });
+function openFullscreen() {
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.mozRequestFullscreen) { /* Firefox */
+      elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE/Edge */
+      elem.msRequestFullscreen();
+    } 
+}
 
 const startApp =() => {
     document.querySelector("#data1").classList.remove("hidden");
@@ -223,22 +245,23 @@ const setUpdatePage = ()=> {
     });
     document.querySelector("#updateDates").addEventListener("click", datesSlider);
     if (bFlex) {
-        document.querySelector("#updateFlex").classList.add("selected");}
-        document.querySelector("#updateFlex").addEventListener("click", isFlexUpdate);
-        for (let index = 0; index < tripTypes.length; index++) {
-            if (tripTypes[index]) {
-                document.querySelector(`#tripSelect${index}`).classList.add("selected");
-            }
-            document.querySelector(`#tripSelect${index}`).addEventListener("click",()=> {
-                if (tripTypes[index]) {
-                    tripTypes[index] = false
-                    document.querySelector(`#tripSelect${index}`).classList.remove("selectedPic");
-                } else {
-                    tripTypes[index] = true
-                    document.querySelector(`#tripSelect${index}`).classList.add("selectedPic");
-                }
-            })
+        document.querySelector("#updateFlex").classList.add("selected");
+    }
+    document.querySelector("#updateFlex").addEventListener("click", isFlexUpdate);
+    for (let index = 0; index < tripTypes.length; index++) {
+        if (tripTypes[index]) {
+            document.querySelector(`#tripSelect${index}`).classList.add("selectedPic");
         }
+        document.querySelector(`#tripSelect${index}`).addEventListener("click",()=> {
+            if (tripTypes[index]) {
+                tripTypes[index] = false
+                document.querySelector(`#tripSelect${index}`).classList.remove("selectedPic");
+            } else {
+                tripTypes[index] = true
+                document.querySelector(`#tripSelect${index}`).classList.add("selectedPic");
+            }
+        })
+    }
     document.querySelector("#resultNum").innerHTML = resultNum;
     document.querySelector("#showResult").addEventListener("click", ()=> {
         document.querySelector("#updatePage").classList.add("hidden");
@@ -349,12 +372,21 @@ const changePicRight = ()=> {
     if(dealPicNum > 1){
         dealPicNum--;
         document.querySelector("#dealPicNum").innerHTML = dealPicNum;
+    } else {
+        dealPicNum = MAXNUM;
+        document.querySelector("#dealPicNum").innerHTML = dealPicNum;
     }
 }
 
 const changePicLeft = ()=> {
-    dealPicNum++;
-    document.querySelector("#dealPicNum").innerHTML = dealPicNum;
+    if(dealPicNum === MAXNUM){
+        dealPicNum = 1;
+        document.querySelector("#dealPicNum").innerHTML = dealPicNum;
+    } else {
+        dealPicNum++;
+        document.querySelector("#dealPicNum").innerHTML = dealPicNum;
+    }
+ 
 }
 
 /* El
